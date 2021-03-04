@@ -1,8 +1,22 @@
-// Name:
-// Date:
+Circle.h file 
 
-#pragma once
-#include <iostream>
+class Circle
+{
+public:
+	Circle();
+	Circle(int rad);
+	int radius;
 
-// your code here
+	void setRadius(int r);
 
+	int getRadius() const;
+	int computeArea() const;
+
+	void printCircle() const;
+	void displayCircle() const;
+	Circle operator+(const Circle& b);
+	friend std::ostream& operator << (std::ostream&, const Circle&);
+
+	private:
+		int radius;
+};
